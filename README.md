@@ -1,6 +1,10 @@
 # ANEEL-Aerogeradores
 Utilização de Python, Web Scraping, Tableau, DataViz e Google Apresentações para Data Engineering, Data Visualization e Data Analysis em um dataset de aerogeradores do ArcGIS do SIGEL/ANEEL 
 
+Clique na imagem abaixo para acessar e interagir com o dashboard completo publicado no Tableau Public.
+
+[![Prévia do Dashboard](caminho/para/sua/imagem.png)](https://public.tableau.com/authoring/SIGELANEEL-Case-Aerogeradores/Painel1#1)
+
 ### Funções dos códigos
 # query_data.py 
 Este arquivo visa extração total dos dados disponível em: (https://sigel.aneel.gov.br/arcgis/rest/services/PORTAL/WFS/MapServer/0/query) por meio de Web Scraping paginado devido a uma limitação de 1000 linhas por consulta.
@@ -31,25 +35,25 @@ As divisões das células estão descritas abaixo:
 
 ### Dicionário dos dados
 De acordo com o Site da ANEEL (https://sigel.aneel.gov.br/arcgis/rest/services/PORTAL/WFS/MapServer/0), os dados retirados via Web Scraping são:
-POT_MW ( type: esriFieldTypeDouble, alias: Potência (MW) );
-ALT_TOTAL ( type: esriFieldTypeDouble, alias: Altura total );
-ALT_TORRE ( type: esriFieldTypeDouble, alias: Altura da torre );
-DIAM_ROTOR ( type: esriFieldTypeDouble, alias: Diâmetro do rotor );
-DATA_ATUALIZACAO ( type: esriFieldTypeDate, alias: Data da atualização, length: 8 );
-EOL_VERSAO_ID ( type: esriFieldTypeInteger, alias: ID Empreendimento );
-NOME_EOL ( type: esriFieldTypeString, alias: Nome da EOL, length: 254 );
-DEN_AEG ( type: esriFieldTypeString, alias: Denominação do AG, length: 100 );
-X ( type: esriFieldTypeDouble, alias: E );
-Y ( type: esriFieldTypeDouble, alias: N );
-VERSAO ( type: esriFieldTypeString, alias: Versão atual, length: 50 );
-DATUM_EMP ( type: esriFieldTypeString, alias: Datum, length: 50 );
-OPERACAO ( type: esriFieldTypeString, alias: Operação Comercial, length: 50 , Coded Values: [1: SIM] , [2: NÃO] );
-FUSO_AG ( type: esriFieldTypeString, alias: Fuso, length: 50 );
-PROPRIETARIO ( type: esriFieldTypeString, alias: Proprietário, length: 1000 );
-ORIGEM ( type: esriFieldTypeString, alias: Origem do dado, length: 50 );
-OBJECTID ( type: esriFieldTypeOID, alias: OBJECTID );
-UF ( type: esriFieldTypeString, alias: UF, length: 50 );
-CEG ( type: esriFieldTypeString, alias: CEG, length: 21 );
-SHAPE ( type: esriFieldTypeGeometry, alias: SHAPE );
+- POT_MW ( type: esriFieldTypeDouble, alias: Potência (MW) );
+- ALT_TOTAL ( type: esriFieldTypeDouble, alias: Altura total );
+- ALT_TORRE ( type: esriFieldTypeDouble, alias: Altura da torre );
+- DIAM_ROTOR ( type: esriFieldTypeDouble, alias: Diâmetro do rotor );
+- DATA_ATUALIZACAO ( type: esriFieldTypeDate, alias: Data da atualização, length: 8 );
+- EOL_VERSAO_ID ( type: esriFieldTypeInteger, alias: ID Empreendimento );
+- NOME_EOL ( type: esriFieldTypeString, alias: Nome da EOL, length: 254 );
+- DEN_AEG ( type: esriFieldTypeString, alias: Denominação do AG, length: 100 );
+- X ( type: esriFieldTypeDouble, alias: E );
+- Y ( type: esriFieldTypeDouble, alias: N );
+- VERSAO ( type: esriFieldTypeString, alias: Versão atual, length: 50 );
+- DATUM_EMP ( type: esriFieldTypeString, alias: Datum, length: 50 );
+- OPERACAO ( type: esriFieldTypeString, alias: Operação Comercial, length: 50 , Coded Values: [1: SIM] , [2: NÃO] );
+- FUSO_AG ( type: esriFieldTypeString, alias: Fuso, length: 50 );
+- PROPRIETARIO ( type: esriFieldTypeString, alias: Proprietário, length: 1000 );
+- ORIGEM ( type: esriFieldTypeString, alias: Origem do dado, length: 50 );
+- OBJECTID ( type: esriFieldTypeOID, alias: OBJECTID );
+- UF ( type: esriFieldTypeString, alias: UF, length: 50 );
+- CEG ( type: esriFieldTypeString, alias: CEG, length: 21 );
+- SHAPE ( type: esriFieldTypeGeometry, alias: SHAPE );
 
 Além disso, foi gerado mais dois campos (longitude e latitude) no arquivo csv e um cálculo no Tableau (Md_Pot_GW).
