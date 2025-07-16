@@ -36,7 +36,7 @@ As divisões das células estão descritas abaixo:
 - Importação de bibliotecas.
 - Definições de URL para extração e destino do arquivo csv.
 - Executa a extração paginada da URL por meio da função no arquivo "query_data.py".
-- Executa os tratamentos dos dados por meio das funções no arquivo "processor_data.py"
+- Executa os tratamentos dos dados por meio das funções no arquivo "processor_data.py".
 - Descreve brevemente os dados coletados.
 - Salva o arquivo csv "aerogeradores_para_tableau.csv" na pasta "outputs" para utilização no Tableau.
 
