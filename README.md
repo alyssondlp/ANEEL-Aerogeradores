@@ -3,20 +3,20 @@ Utilização de Python, Web Scraping, Tableau, DataViz e Google Apresentações 
 
 Clique na imagem abaixo para acessar e interagir com o dashboard completo publicado no Tableau Public.
 
-[![Prévia do Dashboard](SIGEL-ANEEL-Aerogeradores-Tableau)](https://public.tableau.com/authoring/SIGELANEEL-Case-Aerogeradores/Painel1#1)
+[![Prévia do Dashboard](SIGEL-ANEEL-Aerogeradores-Tableau.png)](https://public.tableau.com/authoring/SIGELANEEL-Case-Aerogeradores/Painel1#1)
 
-# Tecnologias Utilizadas
+## Tecnologias Utilizadas
 - **Python:** Linguagem principal para a extração e processamento.
 - **Pandas:** Para manipulação e tratamento dos dados.
 - **GeoPandas:** Para o processamento de dados geoespaciais (latitude e longitude).
 - **Requests:** Para a extração de dados via web scraping da API da ANEEL.
 - **Tableau Public:** Para a criação dos dashboards e visualizações interativas.
 
-### Funções dos códigos
-# query_data.py 
+# Funções dos códigos
+## query_data.py 
 Este arquivo visa extração total dos dados disponível em: (https://sigel.aneel.gov.br/arcgis/rest/services/PORTAL/WFS/MapServer/0/query) por meio de Web Scraping paginado devido a uma limitação de 1000 linhas por consulta.
 
-# processor_data.py
+## processor_data.py
 Este arquivo visa a transformação dos dados brutos de X e Y em longitude e latitude por meio da biblioteca geopandas e salva em um arquivo .csv.
 Além disso, trata os seguintes casos:
 - Corrige a localização da Usina XI que tem localização em MG e estava com a UF de RN.
@@ -30,7 +30,7 @@ Além disso, trata os seguintes casos:
 - Tratamento de valores inválidos da coluna DATUM_EMP para dois casos: Pedra de Amolar I, Pedra de Amolar II.
 - Remoção de linhas contendo valores ausentes desconsiderando a coluna ORIGEM (coluna contém só valores nulos).
 
-# notebook_data.py
+## notebook_data.py
 Este arquivo notebook compila as funções presentes nos arquivos "query_data.py" e "processor_data".
 As divisões das células estão descritas abaixo:
 - Importação de bibliotecas.
@@ -40,7 +40,7 @@ As divisões das células estão descritas abaixo:
 - Descreve brevemente os dados coletados.
 - Salva o arquivo csv "aerogeradores_para_tableau.csv" na pasta "outputs" para utilização no Tableau.
 
-### Dicionário dos dados
+# Dicionário dos dados
 De acordo com o Site da ANEEL (https://sigel.aneel.gov.br/arcgis/rest/services/PORTAL/WFS/MapServer/0), os dados retirados via Web Scraping são:
 - POT_MW ( type: esriFieldTypeDouble, alias: Potência (MW) );
 - ALT_TOTAL ( type: esriFieldTypeDouble, alias: Altura total );
