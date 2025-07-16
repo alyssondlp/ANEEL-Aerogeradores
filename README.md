@@ -3,7 +3,14 @@ Utilização de Python, Web Scraping, Tableau, DataViz e Google Apresentações 
 
 Clique na imagem abaixo para acessar e interagir com o dashboard completo publicado no Tableau Public.
 
-[![Prévia do Dashboard](caminho/para/sua/imagem.png)](https://public.tableau.com/authoring/SIGELANEEL-Case-Aerogeradores/Painel1#1)
+[![Prévia do Dashboard](SIGEL-ANEEL-Aerogeradores-Tableau)](https://public.tableau.com/authoring/SIGELANEEL-Case-Aerogeradores/Painel1#1)
+
+# Tecnologias Utilizadas
+- **Python:** Linguagem principal para a extração e processamento.
+- **Pandas:** Para manipulação e tratamento dos dados.
+- **GeoPandas:** Para o processamento de dados geoespaciais (latitude e longitude).
+- **Requests:** Para a extração de dados via web scraping da API da ANEEL.
+- **Tableau Public:** Para a criação dos dashboards e visualizações interativas.
 
 ### Funções dos códigos
 # query_data.py 
